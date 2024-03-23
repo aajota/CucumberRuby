@@ -6,4 +6,4 @@ end
   Então('eu quero ver a lista de cafés disoníveis') do
      puts 'trolei'
 end
-  
+  continuar comentar essa parte
