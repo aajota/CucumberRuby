@@ -3,6 +3,7 @@ Quando('acesso a página proncipal da Starbugs') do
 end
   
   Então('eu quero ver a lista de cafés disoníveis') do
-     all('.coffee-item')
+     products = all('.coffee-item')
+     expect(products.size).to be > 0
 end
   
