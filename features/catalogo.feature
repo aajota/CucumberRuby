@@ -20,3 +20,8 @@ Cenário: Iniciar a compra de um café
         E o valor total da compra deve ser de R$ 19.00  
         
 Cenário: Café indisponível      
+
+    Dado que estou na página principal da Starbugs
+        E que desejo comprar o café "Expresso Cremoso"
+    Quando inicio a compra desse item
+    Então devo ver um popup informando que o produto está indisponível
