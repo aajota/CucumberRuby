@@ -8,3 +8,8 @@ Cenário: Ancessar o catálogo de cafés na página principal
 
     Quando acesso a página proncipal da Starbugs
     Então eu quero ver a lista de cafés disoníveis 
+
+Cenário: Iniciar a compra de um café
+
+    Dado que estou na página principal da Starbugs
+    
