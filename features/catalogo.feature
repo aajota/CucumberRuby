@@ -12,4 +12,5 @@ Cenário: Ancessar o catálogo de cafés na página principal
 Cenário: Iniciar a compra de um café
 
     Dado que estou na página principal da Starbugs
-    
+        E que desejo comprar o café "Expresso Gelado"
+        E que esse produto custa R$ 9.99
