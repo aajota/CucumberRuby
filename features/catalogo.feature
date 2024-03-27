@@ -14,3 +14,5 @@ Cenário: Iniciar a compra de um café
     Dado que estou na página principal da Starbugs
         E que desejo comprar o café "Expresso Gelado"
         E que esse produto custa R$ 9.99
+        E que o custo de entrega é de R$ 10.00
+        
