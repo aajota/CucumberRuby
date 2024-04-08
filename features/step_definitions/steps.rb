@@ -36,6 +36,5 @@ Dado('que estou na página principal da Starbugs') do
    end
    
    Então('devo ver um popup informando que o produto está indisponível') do      
-     sexta feira santa
 
    end
