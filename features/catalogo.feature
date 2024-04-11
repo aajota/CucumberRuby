@@ -9,7 +9,7 @@ Cenário: Ancessar o catálogo de cafés na página principal
     Quando acesso a página proncipal da Starbugs
     Então eu quero ver a lista de cafés disoníveis 
 
-@temp
+
 Cenário: Iniciar a compra de um café
 
     Dado que estou na página principal da Starbugs
@@ -21,10 +21,11 @@ Cenário: Iniciar a compra de um café
     Então devo ver a página de checkout com os detalhes do croduto
         E o valor total da compra deve ser de "R$ 19,99"  
       
-
+@temp
 Cenário: Café indisponível      
 
     Dado que estou na página principal da Starbugs
-        E que desejo comprar o café "Expresso Cremoso"
+        E que desejo comprar o seguinte produto:
+        |name|Expresso Cremoso|
     Quando inicio a compra desse item
     Então devo ver um popup informando que o produto está indisponível
