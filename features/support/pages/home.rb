@@ -16,6 +16,4 @@ class HomePage
         product.find('.buy-coffee').click
     end
 
-
-
 end
