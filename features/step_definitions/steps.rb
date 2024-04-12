@@ -19,11 +19,11 @@ Quando('inicio a compra desse item') do
    end
    
 Então('devo ver a página de checkout com os detalhes do croduto') do
-    @checkout.assert_product_detalis(product)
+    @checkout.assert_product_detalis(@product)
    end
    
 Então('o valor total da compra deve ser de {string}') do |total_price|
-    @checkout.assert_product_detalis(total_price)
+    @checkout.assert_total_price(total_price)
    end
    
 Então('devo ver um popup informando que o produto está indisponível') do      
