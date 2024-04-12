@@ -1,7 +1,8 @@
-
+require 'rspec'
 
 class CheckoutPages
     include Capybara::DSL
+    include RSpec::Matchers
 
     def assert_product_detalis(product)
         product_title = find('.item-details h1')
@@ -14,7 +15,7 @@ class CheckoutPages
         expect(delivery.text).to eql product[:delivery]
     end
 
-    def assert_total_price(value)
+    def assert_total_price(total_price)
         price = find('.total-price')
         expect(price.text).to eql total_price
     end
