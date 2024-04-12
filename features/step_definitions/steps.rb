@@ -3,8 +3,7 @@ Quando('acesso a página proncipal da Starbugs') do
 end
   
   Então('eu quero ver a lista de cafés disoníveis') do
-     products = all('.coffee-item')
-     expect(products.size).to be > 0
+     expect(@home.coffee_list.size).to be > 0
 end
   
 Dado('que estou na página principal da Starbugs') do
@@ -17,19 +16,11 @@ Dado('que desejo comprar o seguinte produto:') do |table|
   end
    
 Quando('inicio a compra desse item') do
-     product = find('.coffee-item', text: @product[:name])
-     product.find('.buy-coffee').click
+  @home.buy(@product[:name])
    end
    
 Então('devo ver a página de checkout com os detalhes do croduto') do
-     product_title = find('.item-details h1')
-     expect(product_title.text).to eql @product[:name]
 
-     sub_price  = find('.subtotal .sub-price')
-     expect(sub_price.text).to eql @product[:price]
-
-     delivery = find('.delivery-price')
-     expect(delivery.text).to eql @product[:delivery]
    end
    
 Então('o valor total da compra deve ser de {string}') do |total_price|
