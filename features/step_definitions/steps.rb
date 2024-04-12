@@ -1,5 +1,5 @@
 Quando('acesso a página proncipal da Starbugs') do
-     visit 'https://starbugs.vercel.app/'
+  @home.open
 end
   
   Então('eu quero ver a lista de cafés disoníveis') do
@@ -8,7 +8,7 @@ end
 end
   
 Dado('que estou na página principal da Starbugs') do
-     visit 'https://starbugs.vercel.app/'
+     @home.open
    end
 
 Dado('que desejo comprar o seguinte produto:') do |table|
