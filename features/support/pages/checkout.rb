@@ -31,4 +31,11 @@ class CheckoutPages
 
     end
 
+    def choice_payment(payment_type)
+        find('label div', text: payment_type.upcase).click
+    end
+
+    def submit  
+        click_on 'Confirmar pedido'
+    end
 end

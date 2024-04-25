@@ -1,25 +1,19 @@
 Dado('que inciei a compra do item {string}') do |product_name|
     @home.buy(product_name)
   end
-  
   Quando('faço a busca do seguinte CEP: {string}') do |zipcode|
     @checkout.find_zipcode(zipcode)
   end
-  
   Quando('informo os demais dados do endereço:') do |table|
     @checkout.fill_address(table.rows_hash)
   end
   
   Quando('escolho a forma de pagamento {string}') do |payment_type|
-
-    find('label div', text: payment_type.upcase).click
-   
+    @checkout.choice_payment(payment_type)
   end
-  
   Quando('por fim finalizo a compra') do
-    pending # Write code here that turns the phrase above into concrete actions
+   @checkout.submit
   end
-  
   Então('sou redirecionado para a página de confirmmação de pedido') do
     pending # Write code here that turns the phrase above into concrete actions
   end
