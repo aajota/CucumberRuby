@@ -12,6 +12,7 @@ Cenário: Aplicar Desconto de 20%
 Dado que estou na página de checkout
     E o item que está no meu carrinho é o café com leite no valor de R$ 19,00
     E que a taxa de entrega é de R$ 10,00
+    E o valor total é de R$ 29,00
     E tenho um cumpom com 20% de desconto
 Quando aplico esse cumpo de desconto
 Então o desconto de 20%deve ser aplicado no valor do café com leite
