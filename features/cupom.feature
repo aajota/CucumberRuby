@@ -6,9 +6,6 @@ Funcionalidade: Uso de Cupons no checkout
 
 Cenário: Aplicar Desconto de 20%
 
-    O usuário deve ser capaz de aplicar um cupom de 20% de desconto válido no checkout.
-    O desconto deve ser aplicado apenas ao valor do produto e o valor final deve ser recalculado corretamente.
-
 Dado que estou na página de checkout
     E o item que está no meu carrinho é o café com leite no valor de R$ 19,00
     E que a taxa de entrega é de R$ 10,00
@@ -19,8 +16,7 @@ Então o desconto de 20%deve ser aplicado no valor do café com leite
     E o valor final da compra deve ser atualizado para R$ 25,99
 
 Cenário: Cupom Expirado
-    Ao tentar usar um cupom expirado, o usuário deve receber uma notificação informando que o cupom está expirado.
-    Nenhum desconto deve ser aplicado e o valor total da compra deve permanecer inalterado.
+    
 Dado que estou na página de checkout
     E o item que está no meu carrinho é o café com leite no valor de R$ 19,00
     E que a taxa de entrega é de R$ 10,00
@@ -30,8 +26,7 @@ Quando aplico esse cupom de desconto
 Então devo ver a seguinte notificação que o "cumpor expirado!"
 
 Cenário: Cupom Inválido
-    Ao tentar usar um cupom inválido, o usuário deve receber uma notificação informando que o cupom é inválido.
-    Nenhum desconto deve ser aplicado e o valor total da compra deve permanecer inalterado.
+  
 Dado que estou na página de checkout
     E o item que está no meu carrinho é o café com leite no valor de R$ 19,00
     E que a taxa de entrega é de R$ 10,00
