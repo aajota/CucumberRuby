@@ -43,4 +43,9 @@ class CheckoutPages
         find('input[placeholder="Código do cupom"]').set(coupom_code)
             click_on 'Aplicar'
     end
+
+    def assert_notice(text)
+        notice = find('.notice').text
+        expect(notice).to eql text
+    end
 end
