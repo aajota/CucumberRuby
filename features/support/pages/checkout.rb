@@ -38,4 +38,9 @@ class CheckoutPages
     def submit  
         click_on 'Confirmar pedido'
     end
+
+    def set_discount(coupom_code)
+        find('input[placeholder="Código do cupom"]').set(coupom_code)
+            click_on 'Aplicar'
+    end
 end
