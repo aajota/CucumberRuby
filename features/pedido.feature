@@ -4,7 +4,8 @@ Funcionalidade: Pedidos
 
     Como um usuario do starbugs, eu quero selecionar e comprar cafés 
     Para que eu possa receber os produtos em meu endereço e efetuar o pagamento na entrega
-
+    
+    @smoke
     Cenário: compra bem sucedida
 
         Dado que estou na página principal da Starbugs
