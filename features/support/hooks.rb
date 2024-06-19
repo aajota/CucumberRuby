@@ -13,8 +13,10 @@ Before do
 
 end
 
-After do
+After do |scenario|
+    if (scenario.failed) do
     screenshot = page.save_screenshot("logs/screenshots/temp.png")
     attach(screenshot, "image/png", "Screenshot")
-
+    end
+  
 end
