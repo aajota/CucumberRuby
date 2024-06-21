@@ -17,16 +17,15 @@ Cenário: Aplicar Desconto de 20%
 Quando aplico o seguinte cupom: "MEUCAFE"
 Então o valor final da compra deve ser atualizado para "R$ 25,99"
 
-Cenário: Cupom Expirado
-
-Quando aplico o seguinte cupom: "PROMO20"
-Então devo ver a seguinte notificação que o "Cupom expirado!"
+Esquema do Cenário: Tentativa de aplicar o desconto
+Quando aplico o seguinte cupom: "<cupom>"
+Então devo ver a seguinte notificação que o "<saida>"
     E o valir final da compra deve permanecer o mesmo
 
-Cenário: Cupom Inválido
+Exemplos:
+|cupom   |saida          |
+|PROMO20 |Cupom expirado!|
+|PROMO100|Cupom inválido!|
 
-Quando aplico o seguinte cupom: "PROMO100"
-Então devo ver a seguinte notificação que o "Cupom inválido!"
-    E o valir final da compra deve permanecer o mesmo
   
 
